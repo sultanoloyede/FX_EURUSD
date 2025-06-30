@@ -10,7 +10,7 @@ Prereqs:
     pip install twelvedata pandas python-dotenv
     export TD_API_KEY="YOUR_TWELVE_DATA_KEY"
 """
-
+from dotenv import load_dotenv
 import os, sys
 import pandas as pd
 from twelvedata import TDClient
@@ -43,6 +43,8 @@ def merge_daily_into_hourly(hr_df: pd.DataFrame,
 
 # ── main ───────────────────────────────────────────────────────── #
 def main():
+    load_dotenv()
+
     api_key = os.getenv("TD_API_KEY")
     if not api_key:
         sys.exit("❌ Set TD_API_KEY environment variable first.")
