@@ -1,3 +1,3 @@
 # FX_EURUSD
 
-An AI powered automated trading agent
+An AI powered automated trading agent for the EURUSD pair
